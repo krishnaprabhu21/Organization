@@ -16,6 +16,8 @@ import { GroupListComponent } from './group/group-list/group-list.component';
 import { TeamListComponent } from './team/team-list/team-list.component';
 import { MemberListComponent } from './member/member-list/member-list.component';
 import { LeftNavbarComponent } from './shared/left-navbar/left-navbar.component';
+import { LeftTopNavbarComponent } from './shared/left-navbar/left-top-navbar/left-top-navbar.component';
+import { LeftDownNavbarComponent } from './shared/left-navbar/left-down-navbar/left-down-navbar.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { LeftNavbarComponent } from './shared/left-navbar/left-navbar.component'
     ErrorComponent,
     GroupListComponent,
     TeamListComponent,
-    LeftNavbarComponent
+    LeftNavbarComponent,
+    LeftTopNavbarComponent,
+    LeftDownNavbarComponent
   ],
   imports: [
     BrowserModule,
