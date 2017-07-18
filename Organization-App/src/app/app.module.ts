@@ -6,11 +6,17 @@ import { ROUTES } from './app.routes';
 
 //
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MemberListComponent } from './member/member-list.component';
+
 import { ErrorComponent } from './error/error.component';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+
+import { GroupListComponent } from './group/group-list/group-list.component';
+import { TeamListComponent } from './team/team-list/team-list.component';
+import { MemberListComponent } from './member/member-list/member-list.component';
+import { LeftNavbarComponent } from './shared/left-navbar/left-navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +24,10 @@ import { FormsModule } from '@angular/forms';
   //  HomeComponent,
     DashboardComponent,
     MemberListComponent,
-    ErrorComponent
+    ErrorComponent,
+    GroupListComponent,
+    TeamListComponent,
+    LeftNavbarComponent
   ],
   imports: [
     BrowserModule,
