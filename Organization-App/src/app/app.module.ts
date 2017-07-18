@@ -2,16 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+//
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './member/member-list.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+  //  HomeComponent,
     DashboardComponent,
-    MemberListComponent
+    MemberListComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule
