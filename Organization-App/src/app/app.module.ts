@@ -47,7 +47,7 @@ import { AuthServiceService } from './services/authentication.service';
     CookieModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: false })
   ],
-  providers: [MemberService, AuthServiceService],
+  providers: [MemberService, AuthServiceService, GroupsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
