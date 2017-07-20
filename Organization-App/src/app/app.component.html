@@ -12,7 +12,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-        
+
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search">
@@ -23,8 +23,17 @@
     <!-- /.navbar-collapse -->
 </nav>
 
-<app-left-navbar></app-left-navbar>
-
+<!-- <app-left-navbar></app-left-navbar> -->
+<div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar" style="border: 2px solid blue; padding: 1rem;">
+        <router-outlet name="navbar-top-left"></router-outlet>
+    </ul>
+    <ul class="nav nav-sidebar" style="border: 2px solid red; padding: 1rem;">
+        <router-outlet name="navbar-bottom-left"></router-outlet>
+    </ul>
+</div>
 <div class="container-fluid">
-    <app-dashboard></app-dashboard>
+    <div style="border: 2px solid green; padding: 1rem;">
+        <router-outlet></router-outlet>
+    </div>
 </div>
