@@ -1,21 +1,26 @@
+<div class="row">
+  <div class="col-sm-3">
 
-  <div class="row">
-    <div class="col-sm-3">
-     
-      <div class="thumbnail">
-             Member 1
-     </div>
-    </div>
-    <div class="col-sm-3">
-     
-          <div class="thumbnail">
-             Member 2
-     </div>
-
-    </div>
-    <div class="col-sm-3">
-     <div class="thumbnail">
-             Member 3
-     </div>
+    <div class="thumbnail">
+      <div *ngFor="let item of Members">
+         <div class="thumbnail">
+        <p>{{item.FirstName}}</p>
+        <p>{{item.MiddleName}}</p>
+        <p>{{item.LastName}}</p>
+        <img [src]="item.Profilepic" [alt]="item.FirstName">
+      </div>
     </div>
   </div>
+  <div class="col-sm-3">
+
+    <div class="thumbnail">
+      Member 2
+    </div>
+
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail">
+      Member 3
+    </div>
+  </div>
+</div>
