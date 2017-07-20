@@ -2,7 +2,7 @@
     width: 200px;
 }
 
-.vertical-menu a {
+.vertical-menu li {
     background-color: #eee;
     color: black;
     display: block;
@@ -10,11 +10,11 @@
     text-decoration: none;
 }
 
-.vertical-menu a:hover {
+.vertical-menu li:hover {
     background-color: #ccc;
 }
 
-.vertical-menu a.active {
+.vertical-menu li.active {
     background-color: gray;
     color: white;
 }
