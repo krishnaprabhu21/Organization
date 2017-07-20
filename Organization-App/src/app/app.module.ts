@@ -11,6 +11,7 @@ import { ErrorComponent } from './error/error.component';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CookieModule } from 'ngx-cookie';
 
 import { GroupListComponent } from './group/group-list/group-list.component';
 import { TeamListComponent } from './team/team-list/team-list.component';
@@ -21,12 +22,12 @@ import { LeftDownNavbarComponent } from './shared/left-navbar/left-down-navbar/l
 import { RightNavbarComponent } from './shared/right-navbar/right-navbar.component';
 import { RightTopNavbarComponent } from './shared/right-navbar/right-top-navbar/right-top-navbar.component';
 import { RightBottomNavbarComponent } from './shared/right-navbar/right-bottom-navbar/right-bottom-navbar.component';
-
+import { AuthServiceService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-  //  HomeComponent,
+    //  HomeComponent,
     DashboardComponent,
     MemberListComponent,
     ErrorComponent,
@@ -41,11 +42,12 @@ import { RightBottomNavbarComponent } from './shared/right-navbar/right-bottom-n
   ],
   imports: [
     BrowserModule,
-        FormsModule,
-        HttpModule,
+    FormsModule,
+    HttpModule,
+    CookieModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: false })
   ],
-  providers: [MemberService,GroupsService],
+  providers: [MemberService, AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
