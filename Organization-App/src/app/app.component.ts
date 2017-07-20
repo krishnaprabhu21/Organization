@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+SearchQuery:string="";
+ ongroupClicked(message: string): void {
+      console.log("app component", message);
+      this.SearchQuery=message;
+    }
+
 }
+
+
+

@@ -10,6 +10,7 @@ export class LeftNavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ROUTES } from './app.routes';
 import { MemberService } from './member/member-list/member.service';
-//
+import { GroupsService } from './group/group-list/groups.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ErrorComponent } from './error/error.component';
@@ -45,7 +45,7 @@ import { RightBottomNavbarComponent } from './shared/right-navbar/right-bottom-n
         HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: false })
   ],
-  providers: [MemberService],
+  providers: [MemberService,GroupsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

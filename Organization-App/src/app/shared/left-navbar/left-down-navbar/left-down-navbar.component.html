@@ -1,5 +1,7 @@
-<div class="vertical-menu">
-  <li> <a href="#">Total Groups</a></li>
-  <li><a href="#">Total Teams</a></li>
-  <li> <a href="#">Total Members</a></li>
+List of Groups
+<div *ngFor="let item of groups">
+  <div class="thumbnail">
+
+    <p (click)="clicked(item.GroupName)">{{item.GroupName}}</p>
+  </div>
 </div>
