@@ -22,7 +22,7 @@
         <div class="navbar-form navbar-right">
             <div *ngIf="auth.isAuthenticated()">
                 <ul class="navbar navbar-right">
-                    <button id="logout" class="btn btn-default" (click)="auth.logout()">Logout</button>
+                    <button id="logout" class="btn btn-danger" (click)="auth.logout()">Logout</button>
                 </ul>
                 <ul class="navbar navbar-right" *ngIf="auth.userProfile">
                     <p>{{auth.userProfile.nickname}}</p>
@@ -32,7 +32,8 @@
                 </ul>
             </div>
             <ul class="navbar navbar-right" *ngIf="!auth.isAuthenticated()">
-                <button id="login" class="btn btn-default" (click)="auth.login()">Login</button>
+                <button id="login" class="btn btn-info" (click)="auth.login()">Login</button>
+                <button id="login" class="btn btn-warning" (click)="auth.signUp()">Signup</button>
             </ul>
         </div>
     </div>

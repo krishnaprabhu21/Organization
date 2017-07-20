@@ -75,7 +75,6 @@ export class AuthServiceService {
         this.lock.on("authenticated", (authResult: any) => {
             this._cookieService.putObject("authResult", authResult);
             this.authResult = authResult;
-            console.log("const");
             //On login loading and saving profile details for future use
             this.getProfile(function () { });
         });
@@ -99,6 +98,10 @@ export class AuthServiceService {
 
     public login(): void {
         this.lock.show();
+    }
+
+    public signUp(): void {
+        this.lock.show({ initialScreen: 'signUp' });
     }
 
     public logout(): void {
