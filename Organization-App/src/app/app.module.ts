@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ROUTES } from './app.routes';
-
+import { MemberService } from './member/member-list/member.service';
 //
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -18,6 +18,9 @@ import { MemberListComponent } from './member/member-list/member-list.component'
 import { LeftNavbarComponent } from './shared/left-navbar/left-navbar.component';
 import { LeftTopNavbarComponent } from './shared/left-navbar/left-top-navbar/left-top-navbar.component';
 import { LeftDownNavbarComponent } from './shared/left-navbar/left-down-navbar/left-down-navbar.component';
+import { RightNavbarComponent } from './shared/right-navbar/right-navbar.component';
+import { RightTopNavbarComponent } from './shared/right-navbar/right-top-navbar/right-top-navbar.component';
+import { RightBottomNavbarComponent } from './shared/right-navbar/right-bottom-navbar/right-bottom-navbar.component';
 
 
 @NgModule({
@@ -31,14 +34,18 @@ import { LeftDownNavbarComponent } from './shared/left-navbar/left-down-navbar/l
     TeamListComponent,
     LeftNavbarComponent,
     LeftTopNavbarComponent,
-    LeftDownNavbarComponent
+    LeftDownNavbarComponent,
+    RightNavbarComponent,
+    RightTopNavbarComponent,
+    RightBottomNavbarComponent
   ],
   imports: [
     BrowserModule,
         FormsModule,
+        HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: false })
   ],
-  providers: [],
+  providers: [MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
