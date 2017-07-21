@@ -15,7 +15,7 @@
 
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-                <input  [(ngModel)]="SearchQuery" type="text" class="form-control" placeholder="Search" name="search">
+                <input [(ngModel)]="SearchQuery" type="text" class="form-control" placeholder="Search" name="search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
@@ -37,42 +37,27 @@
             </ul>
         </div>
     </div>
-    <!-- <ul class="navbar navbar-right" *ngIf="!auth.isAuthenticated()">
-        <p><button id="logout" class="btn btn-default">Logout</button>
-        </p>
-    </ul>
-    <ul class="navbar navbar-right" *ngIf="auth.isAuthenticated()">
-        <p><button id="logout" class="btn btn-default">Login</button>
-        </p>
-    </ul> -->
-
-    <!-- <ul class="nav navbar-nav navbar-right" *ngIf="!auth.isAuthenticated()">
-        <p class="navbar-right"><button id="logout" class="btn btn-default">Logout</button>
-        </p>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" *ngIf="auth.isAuthenticated()">
-        <p class="navbar-right"><button id="logout" class="btn btn-default">Login</button>
-        </p>
-    </ul> -->
     <!-- /.navbar-collapse -->
 </nav>
-
-<!-- <app-left-navbar></app-left-navbar> -->
-<div class="col-sm-3 col-md-2 sidebar">
-    <ul class="nav nav-sidebar" style="border: 2px solid blue; padding: 1rem;">
-        <router-outlet name="navbar-top-left"></router-outlet>
+<div class="col-sm-2 sidebar ">
+    <ul class="nav nav-sidebar row" style="padding: 1rem;">
+        <app-left-top-navbar></app-left-top-navbar>
     </ul>
-    <ul class="nav nav-sidebar" style="border: 2px solid red; padding: 1rem;">
-        <router-outlet name="navbar-bottom-left"></router-outlet>
+    <ul class="nav nav-sidebar row" style="padding: 1rem;">
+        <app-left-down-navbar (notify)='ongroupClicked($event)'></app-left-down-navbar>
     </ul>
 </div>
-<app-left-navbar></app-left-navbar>
-<app-right-navbar></app-right-navbar>
-<div class="container-fluid">
-    <div style="border: 2px solid green; padding: 1rem;">
-        <router-outlet></router-outlet>
-        <app-left-down-navbar (notify)='ongroupClicked($event)'>
-            
-        </app-left-down-navbar>
-    </div>
+
+<div class="col-sm-8 container-fluid">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="col-sm-2 sidebar navbar justify-content-end">
+    <ul class="nav nav-sidebar row justify-content-end" style="padding: 1rem;">
+        <app-right-top-navbar></app-right-top-navbar>
+
+    </ul>
+    <ul class="nav nav-sidebar row justify-content-end" style="padding: 1rem;">
+        <app-right-bottom-navbar></app-right-bottom-navbar>
+    </ul>
 </div>

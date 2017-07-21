@@ -1,8 +1,5 @@
 <div class="vertical-menu">
   <li> <a routerLink="/group-list" routerLinkActive="active"> Groups</a></li>
   <li> <a routerLink="/team-list" routerLinkActive="active">Teams</a></li>
-  <li> <a routerLink="/member-list" routerLinkActive="active">Members without sidebar</a></li>
-  <li> <a [routerLink]="['/member-list',{ outlets: { 'navbar-top-left': 'top-navbar'} } ]" routerLinkActive="active">Members 1 side bar</a></li>
-  <li> <a [routerLink]="['/member-list',{ outlets: { 'navbar-top-left': 'top-navbar','navbar-bottom-left': 'bottom-navbar'} } ]"
-      routerLinkActive="active">Members 2 side bars</a></li>
+  <li> <a routerLink="/member-list" routerLinkActive="active">Members</a></li>
 </div>

@@ -1,7 +1,13 @@
-List of Groups
+<!-- List of Groups
 <div *ngFor="let item of groups">
   <div class="thumbnail">
 
     <p (click)="clicked(item.GroupName)">{{item.GroupName}}</p>
   </div>
+</div> -->
+
+<div class="vertical-menu">
+  <li *ngFor="let item of groups"> <a (click)="clicked(item.GroupName)"> {{item.GroupName}}</a></li>
+  <!-- <li> <a routerLink="/team-list" routerLinkActive="active">Teams</a></li>
+  <li> <a routerLink="/member-list" routerLinkActive="active">Members</a></li> -->
 </div>

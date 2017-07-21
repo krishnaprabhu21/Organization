@@ -8,42 +8,10 @@ import { Routes } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 
 export const ROUTES: Routes = [
-    {
-        path: 'member-list', children: [
-            {
-                path: 'top-navbar',
-                component: LeftTopNavbarComponent,
-                outlet: 'navbar-top-left'
-            }, {
-                path: '',
-                component: MemberListComponent,
-            },
-            {
-                path: 'bottom-navbar',
-                component: LeftDownNavbarComponent,
-                outlet: 'navbar-bottom-left'
-            },
-        ]
-    },
+    { path: 'member-list', component: MemberListComponent },
     { path: 'test', component: LeftDownNavbarComponent },
     { path: 'team-list', component: TeamListComponent },
     { path: 'group-list', component: GroupListComponent },
-    {
-        path: '',
-        children: [
-            {
-                path: '',
-                component: DashboardComponent
-            }, {
-                path: '',
-                component: LeftTopNavbarComponent,
-                outlet: 'navbar-top-left'
-            },
-            {
-                path: '',
-                component: LeftDownNavbarComponent,
-                outlet: 'navbar-bottom-left'
-            }]
-    },
+    { path: '', component: DashboardComponent },
     { path: '**', component: ErrorComponent }
 ];
