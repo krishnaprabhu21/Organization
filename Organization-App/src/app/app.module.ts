@@ -6,11 +6,10 @@ import { ROUTES } from './app.routes';
 import { MemberService } from './member/member-list/member.service';
 import { GroupsService } from './group/group-list/groups.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 import { ErrorComponent } from './error/error.component';
 import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieModule } from 'ngx-cookie';
 
 import { GroupListComponent } from './group/group-list/group-list.component';
@@ -43,6 +42,7 @@ import { AuthServiceService } from './services/authentication.service';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     CookieModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: false })
